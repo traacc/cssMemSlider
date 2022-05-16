@@ -16,7 +16,6 @@ body {
 .memes {
     overflow: hidden;
     margin: 0 auto;
-    text-align: center;
 }
 
 input[type=radio] {
@@ -68,7 +67,6 @@ input[type=radio] {
 
 .memes__innerText {
     width: 12.5em;
-    text-align: center;
     overflow: hidden;
 }
 
@@ -134,24 +132,24 @@ input[type=radio] {
     transform: translateX(0%);
 }
 #two:checked~ .memes__inner .memes__list{
-    transform: translateX(-100%);
+    transform: translateX(calc(-30em));
 }
 #three:checked~ .memes__inner .memes__list{
-    transform: translateX(-200%);
+    transform: translateX(calc(-30em * 2 - 2em));
 }
 #four:checked~ .memes__inner .memes__list{
-    transform: translateX(-300%);
+    transform: translateX(calc(-30em * 3 - 2em * 2));
 }
 
 #one:checked~ .memes__bottom .memes__innerText .memes__text{
     transform: translateX(0%);
 }
 #two:checked~ .memes__bottom .memes__innerText .memes__text{
-    transform: translateX(-100%);
+    transform: translateX(calc(-12.5em));
 }
 #three:checked~ .memes__bottom .memes__innerText .memes__text{
-    transform: translateX(-200%);
+    transform: translateX(calc(-12.5em * 2 - 2em));
 }
 #four:checked~ .memes__bottom .memes__innerText .memes__text{
-    transform: translateX(-300%);
+    transform: translateX(calc(-12.5em * 3 - 2em * 2));
 }
