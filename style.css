@@ -126,14 +126,7 @@ input[type=radio] {
     background-color: rgba(0, 0, 0, 1);
 }
 
-@media (max-width:768px) {
-    .container {
-        max-width: 480px;
-    }
-    .memes__bottom{
-        flex-wrap: wrap-reverse;
-    }
-}
+
 
 #one:checked~ .memes__inner .memes__list{
     transform: translateX(0%);
@@ -172,4 +165,100 @@ input[type=radio] {
 }
 #four:checked~ .memes__bottom .memes__controls .memes__ctlwrapper:nth-child(4) .memes__btn{
     background-color: rgba(0, 0, 0, 0);
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: 480px;
+    }
+    .memes {
+        font-size: 1rem;
+    }
+    .memes__img {
+        width: 26em;
+    }
+    .memes__bottom{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .memes__innerText {
+        flex-basis: 100%;
+    }
+    .memes__p {
+        text-align: center;
+        width: 26em;
+        margin-right: 0;
+    }
+
+    #one:checked~ .memes__inner .memes__list{
+        transform: translateX(0%);
+    }
+    #two:checked~ .memes__inner .memes__list{
+        transform: translateX(calc(-26em - 1.7em));
+    }
+    #three:checked~ .memes__inner .memes__list{
+        transform: translateX(calc(-26em * 2 - 2em * 2));
+    }
+    #four:checked~ .memes__inner .memes__list{
+        transform: translateX(calc(-26em * 3 - 2em * 3));
+    }
+    
+    #one:checked~ .memes__bottom .memes__innerText .memes__text{
+        transform: translateX(0%);
+    }
+    #two:checked~ .memes__bottom .memes__innerText .memes__text{
+        transform: translateX(calc(-26em));
+    }
+    #three:checked~ .memes__bottom .memes__innerText .memes__text{
+        transform: translateX(calc(-26em * 2));
+    }
+    #four:checked~ .memes__bottom .memes__innerText .memes__text{
+        transform: translateX(calc(-26em * 3));
+    }
+}
+
+@media (max-width:576px) {
+    .container {
+        max-width: 320px;
+    }
+    .memes {
+        font-size: 0.8rem;
+    }
+    .memes__img {
+        width: 22em;
+        margin-right: 0;
+    }
+    .memes__bottom{
+        flex-wrap: wrap-reverse;
+    }
+    .memes__p {
+        width: 20em;
+    }
+
+
+    #one:checked~ .memes__inner .memes__list{
+        transform: translateX(0%);
+    }
+    #two:checked~ .memes__inner .memes__list{
+        transform: translateX(calc(-22em));
+    }
+    #three:checked~ .memes__inner .memes__list{
+        transform: translateX(calc(-22em * 2));
+    }
+    #four:checked~ .memes__inner .memes__list{
+        transform: translateX(calc(-22em * 3));
+    }
+
+    #one:checked~ .memes__bottom .memes__innerText .memes__text{
+        transform: translateX(0%);
+    }
+    #two:checked~ .memes__bottom .memes__innerText .memes__text{
+        transform: translateX(calc(-20em));
+    }
+    #three:checked~ .memes__bottom .memes__innerText .memes__text{
+        transform: translateX(calc(-20em * 2));
+    }
+    #four:checked~ .memes__bottom .memes__innerText .memes__text{
+        transform: translateX(calc(-20em * 3));
+    }
 }
